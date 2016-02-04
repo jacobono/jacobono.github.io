@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://replace-this-with-your-hugo-site.com/</link>
-    <description>Recent content on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title> on Daniel&#39;s Blog </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://jabobono.github.io/</link>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Feb 2016 20:07:45 -0500</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    <author>daniel</author>
+    
+    <updated>Wed, 03 Feb 2016 20:07:45 EST</updated>
     
     <item>
       <title>hello</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/hello/</link>
-      <pubDate>Wed, 03 Feb 2016 20:07:45 -0500</pubDate>
-      
-      <guid>http://replace-this-with-your-hugo-site.com/post/hello/</guid>
+      <link>http://jabobono.github.io/post/hello/</link>
+      <pubDate>Wed, 03 Feb 2016 20:07:45 EST</pubDate>
+      <author>daniel</author>
+      <guid>http://jabobono.github.io/post/hello/</guid>
       <description></description>
     </item>
     
