@@ -4,7 +4,7 @@ title = "Daniel's Blog"
 theme = "greyshade"
 
 [author]
-name = "daniel"
+name = "Daniel Mijares"
 # email will use for gravatar
 email = "daniel.j.mijares@gmail.com"
 
@@ -13,7 +13,7 @@ category = "categories"
 
 [params]
 # site description, will show under navigation
-description = ""
+description = "Writings About Things I Like To Do"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss = "/index.xml"
@@ -27,12 +27,12 @@ github_user = "jacobono"
 coderwall_user = ""
 stackoverflow_user = ""
 stackoverflow_user_id = ""
-linkedin_user = ""
+linkedin_user = "daniel-mijares-8711225a"
 pinterest_user = ""
 delicious_user = ""
 pinboard_user = ""
 quora_user = ""
-instagram_user = ""
+instagram_user = "daniel_jacobo_"
 behance_user = ""
 douban_user = ""
 
