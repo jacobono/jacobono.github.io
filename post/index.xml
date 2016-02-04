@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on Daniel&#39;s Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://jabobono.github.io/post/</link>
+    <link>http://jacobono.github.io/post/</link>
     <language>en-us</language>
     <author>daniel</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>hello</title>
-      <link>http://jabobono.github.io/post/hello/</link>
+      <link>http://jacobono.github.io/post/hello/</link>
       <pubDate>Wed, 03 Feb 2016 20:07:45 EST</pubDate>
       <author>daniel</author>
-      <guid>http://jabobono.github.io/post/hello/</guid>
+      <guid>http://jacobono.github.io/post/hello/</guid>
       <description></description>
     </item>
     
