@@ -15,6 +15,9 @@ category = "categories"
 # site description, will show under navigation
 description = "Writings About Things I Like To Do"
 
+[blackfriday]
+  smartypants = true
+
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss = "/index.xml"
 subscribe_email = ""
