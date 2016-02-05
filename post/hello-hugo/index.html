@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello Hugo! - Daniel&#39;s Blog</title>
+	<meta name="author" content="map[name:Daniel Mijares email:daniel.j.mijares@gmail.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="canonical" href="http://jacobono.github.io/post/hello-hugo/">
+	<link href="http://jacobono.github.io//favicon.png" rel="shortcut icon">
+	<link href="http://jacobono.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://jacobono.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://jacobono.github.io//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('daniel.j.mijares@gmail.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/post/">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Writings About Things I Like To Do
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href='mailto:daniel.j.mijares@gmail.com' title="Email">Email</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Hello Hugo!</h1>
+	<div class="entry-content" itemprop="articleBody">
+
+<p>I kept putting off a github blog (long time) &ndash; something about the <code>gh-pages</code> workflow was weird enough for me to continue to put it off.</p>
+
+<p>I finally decided to bite the bullet and figure this thing out!</p>
+
+<p>I basically had two choices:</p>
+
+<ul>
+<li><a href="https://jekyllrb.com/">jekyll</a></li>
+<li><a href="https://gohugo.io/">hugo</a></li>
+</ul>
+
+<p>Hugo seemed really easy to use, and it definitely is.</p>
+
+<h1 id="setting-it-all-up:559804b0a39dd16d2d1d1238c597145a">Setting It All Up</h1>
+
+<p>With a github blog, you need to create a repository of <code>&lt;your-github-username&gt;.github.io</code>.  For me that is <code>jacobo.github.io</code>.</p>
+
+<p>Anything under the <code>master</code> branch with an <code>index.html</code> file will be served at the url <code>http://&lt;your-github-username&gt;.github.io</code>.</p>
+
+<ul>
+<li>Create your repository &ndash; <code>&lt;your-github-username&gt;.github.io</code> on <a href="www.github.com">github</a></li>
+<li>Install hugo &ndash; <code>brew install hugo</code></li>
+<li>Create a new hugo powered site &ndash; <code>hugo new site &lt;your-github-username&gt;.github.io</code></li>
+<li><code>cd &lt;your-github-username&gt;.github.io</code></li>
+<li>init your git repo however you see fit <code>git init</code> or through <code>emacs</code> and <code>magit</code></li>
+<li>add your repo as a remote &ndash; I use <a href="https://github.com/github/hub">hub</a> <code>hub remote add origin &lt;your-github-username&gt;/&lt;your-github-username&gt;.github.io</code></li>
+</ul>
+
+<h1 id="adding-a-theme:559804b0a39dd16d2d1d1238c597145a">Adding a theme</h1>
+
+<p>I went with <a href="https://github.com/cxfksword/greyshade">a port of the greyshade theme from octopress</a>.</p>
+
+<p>Clone into your folder with <code>hub clone https://github.com/cxfksword/greyshade themes/greyshade</code> and <em>DONT</em> forget to delete the <code>themes/greyshade/.git</code> directory that contains.</p>
+
+<p>Add <code>theme = &quot;greyshade&quot;</code> to <code>config.toml</code>.</p>
+
+<p>Also add the things the theme says to add in <code>config.toml</code>.</p>
+
+<h2 id="editing-the-theme:559804b0a39dd16d2d1d1238c597145a">Editing the theme</h2>
+
+<p>First time using hugo, so for me as of <code>v0.15</code> creating a new post wouldn&rsquo;t work because of an empty default archetype in the theme.</p>
+
+<p>The docs are really good though, so after a quick search I found the <a href="https://gohugo.io/content/archetypes/">archetype docs</a> showing a default that works to create a new post.</p>
+
+<p>Change <code>themes/greyshade/archetypes/default.md</code></p>
+
+<pre><code class="language-markdown">+++
+tags = [&quot;x&quot;, &quot;y&quot;]
+categories = [&quot;x&quot;, &quot;y&quot;]
++++
+</code></pre>
+
+<h1 id="creating-your-first-post:559804b0a39dd16d2d1d1238c597145a">Creating Your First Post</h1>
+
+<p><code>hugo new post/hello.md</code></p>
+
+<p>With the default archetype, this a going to be a real post, but you can make it a draft if you want by adding <code>draft = true</code> at the to of <code>content/post/hello.md</code></p>
+
+<h1 id="run-locally:559804b0a39dd16d2d1d1238c597145a">Run Locally</h1>
+
+<p>Run <code>hugo server -w</code> will run locally and serve the site up at <code>http://localhost:1313</code>.  You can go to it and check it out there.</p>
+
+<h1 id="set-up-source-branch:559804b0a39dd16d2d1d1238c597145a">Set Up <code>source</code> Branch</h1>
+
+<p>However you please, create and checkout the branch <code>source</code> and make a <code>.gitignore</code> file with content</p>
+
+<pre><code>public
+</code></pre>
+
+<p>This branch will host all of what is in the current folder (but not the <code>public</code> folder because that will go to <code>master</code>).</p>
+
+<p>Add all the files so far, and push to the <code>source</code> branch.</p>
+
+<h1 id="build-the-static-site-and-push-to-master:559804b0a39dd16d2d1d1238c597145a">Build The Static Site And Push To Master</h1>
+
+<ul>
+<li>Run <code>hugo</code> to build the site into the <code>public</code> folder.</li>
+<li><code>cd public</code> and init a git repository here.</li>
+<li>add your remote as before</li>
+<li>commit everything in this public folder</li>
+<li>push to master</li>
+</ul>
+
+<p>And thats it.  Go to your github.io page in the browser and when github reloads its servers you can see your blog, hosted by github! :smiley:</p>
+
+<h2 id="markdown-support:559804b0a39dd16d2d1d1238c597145a">Markdown Support</h2>
+
+<p>Install <a href="https://github.com/russross/blackfriday">blackfriday</a> on your machine, to get markdown support.  It is awesome.</p>
+
+<h2 id="last-thoughts:559804b0a39dd16d2d1d1238c597145a">Last Thoughts</h2>
+
+<p>I&rsquo;m not quite sure how I like the two branches in separate folders &ndash; it just seems so weird to me from how I normally develop day-to-day.</p>
+
+<p>It does seperate things clearly though.</p>
+
+<p>A better improvement might be to have a CI server push the public folder to master on every commit from source.</p>
+
+<p>Another improvement could be to use gulp or something similar (and something I have never worked with) to compile and minify the asset pipeline.</p>
+
+<p>That would be pretty cool to learn.</p>
+
+<p><sup>10</sup>&frasl;<sub>10</sub> would totally do again! :bowtie:</p>
+</div></article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+	
+	</div>
+	
+</div>
+
+					
+					
+					
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2016
+
+    Daniel Mijares
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+<script src="http://jacobono.github.io//js/slash.js"></script>
+<script src="http://jacobono.github.io//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script></footer>
+		</div>
+	</div>
+	
+</body>
+</html>
